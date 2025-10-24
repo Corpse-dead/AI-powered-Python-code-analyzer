@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Code Review Assistant</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 Smart Code Review Assistant</h1>
+            <p>AI-powered Python code analysis and quality prediction</p>
+        </header>
+
+        <div class="main-content">
+            <div class="upload-section">
+                <h2>Upload Your Code</h2>
+                <div class="upload-options">
+                    <div class="upload-method">
+                        <h3>📁 Upload File</h3>
+                        <input type="file" id="fileInput" accept=".py">
+                        <button onclick="uploadFile()" class="btn btn-primary">Analyze File</button>
+                    </div>
+                    
+                    <div class="upload-method">
+                        <h3>✍️ Paste Code</h3>
+                        <textarea id="codeInput" placeholder="Paste your Python code here..." rows="10"></textarea>
+                        <button onclick="analyzeText()" class="btn btn-primary">Analyze Code</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="loading" class="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Analyzing your code...</p>
+            </div>
+
+            <div id="results" class="results" style="display: none;">
+                <h2>📊 Analysis Results</h2>
+                
+                <div class="score-card">
+                    <div class="score-display">
+                        <div class="score-value" id="qualityScore">-</div>
+                        <div class="score-label">Quality Score</div>
+                        <div class="score-grade" id="scoreGrade">-</div>
+                    </div>
+                </div>
+
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <h3>📏 Code Metrics</h3>
+                        <ul id="codeMetrics"></ul>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <h3>🎯 ML Prediction</h3>
+                        <ul id="mlPrediction"></ul>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <h3>💡 Suggestions</h3>
+                        <ul id="suggestions"></ul>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <h3>🔍 Code Smells</h3>
+                        <ul id="codeSmells"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Built with FastAPI + scikit-learn | AI/ML Code Analysis</p>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
