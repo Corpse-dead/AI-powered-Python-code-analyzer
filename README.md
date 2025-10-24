@@ -30,7 +30,7 @@ An AI-powered Python code analyzer that uses machine learning to evaluate code q
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/AI-powered-Python-code-analyzer.git
+git clone https://github.com/Corpse-dead/AI-powered-Python-code-analyzer.git
 cd AI-powered-Python-code-analyzer
 ```
 
